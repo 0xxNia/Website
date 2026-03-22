@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IMPXFIT
 
-## Getting Started
+Корпоративный многоязычный сайт агро-B2B компании IMPXFIT на `Next.js App Router`, `TypeScript` и `Tailwind CSS`.
 
-First, run the development server:
+## Стек
+
+- `Next.js 16`
+- `React 19`
+- `TypeScript`
+- `Tailwind CSS 4`
+- App Router + SSG-маршруты
+- SEO metadata, `robots.txt`, `sitemap.xml`
+
+## Команды
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npm run typecheck
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Локальный запуск по умолчанию:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://127.0.0.1:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Структура проекта
 
-## Learn More
+```text
+src/
+  app/
+    [locale]/
+      about/
+      catalog/
+      contacts/
+      news/
+    api/contact/
+    robots.ts
+    sitemap.ts
+  components/
+    layout/
+    sections/
+    ui/
+  data/
+    catalog.ts
+    news.ts
+    site.ts
+  lib/
+    i18n.ts
+    metadata.ts
+    utils.ts
+  types/
+    content.ts
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Где менять контент
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Общие тексты сайта, навигацию, hero-блоки, контакты, футер:
+  `src/data/site.ts`
+- Категории, продуктовые страницы и карточки направлений:
+  `src/data/catalog.ts`
+- Новости, листинг и детальные страницы:
+  `src/data/news.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Где менять локали
 
-## Deploy on Vercel
+Локали и базовые i18n-хелперы:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `src/lib/i18n.ts`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Поддерживаются:
+
+- `ru`
+- `en`
+- `kk`
+
+## Где менять SEO
+
+- Общая metadata-логика:
+  `src/lib/metadata.ts`
+- Статические SEO-маршруты:
+  `src/app/robots.ts`
+  `src/app/sitemap.ts`
+- Page-level metadata:
+  в файлах `page.tsx` внутри `src/app/[locale]/...`
+
+## Контактная форма
+
+- UI формы:
+  `src/components/sections/contact-form.tsx`
+- API endpoint:
+  `src/app/api/contact/route.ts`
+
+Сейчас endpoint валидирует входные данные и возвращает успешный ответ. Для production-интеграции можно подключить CRM, email-провайдер или внутренний API без изменения структуры страниц.
+
+## Примечания
+
+- Главная страница редиректит на `ru`.
+- Все публичные страницы уже подготовлены как локализованные SSG-маршруты.
+- `dev` и `build` переведены на `webpack` для стабильной работы в средах, где `Turbopack` ограничен sandbox-правилами.

@@ -1,0 +1,68 @@
+<svg width="1600" height="1080" viewBox="0 0 1600 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="141" y1="56" x2="1456" y2="987" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DDE8D3"/>
+      <stop offset="0.34" stop-color="#B8C69B"/>
+      <stop offset="0.68" stop-color="#819862"/>
+      <stop offset="1" stop-color="#556B44"/>
+    </linearGradient>
+    <linearGradient id="fieldA" x1="96" y1="211" x2="702" y2="580" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C8D6AA"/>
+      <stop offset="1" stop-color="#7F985E"/>
+    </linearGradient>
+    <linearGradient id="fieldB" x1="818" y1="143" x2="1514" y2="455" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D7DDC0"/>
+      <stop offset="1" stop-color="#93A671"/>
+    </linearGradient>
+    <linearGradient id="fieldC" x1="164" y1="610" x2="873" y2="1017" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B1C08B"/>
+      <stop offset="1" stop-color="#627A4A"/>
+    </linearGradient>
+    <linearGradient id="fieldD" x1="906" y1="488" x2="1532" y2="994" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A2B37A"/>
+      <stop offset="1" stop-color="#49603B"/>
+    </linearGradient>
+    <linearGradient id="earth" x1="551" y1="483" x2="801" y2="1005" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CDB480"/>
+      <stop offset="1" stop-color="#846A3E"/>
+    </linearGradient>
+    <filter id="blurLarge" x="-120" y="-120" width="1840" height="1320" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="48"/>
+    </filter>
+    <pattern id="rowsLight" width="88" height="88" patternUnits="userSpaceOnUse" patternTransform="rotate(17)">
+      <path d="M0 28H88" stroke="#FAF5E8" stroke-opacity=".18" stroke-width="8"/>
+      <path d="M0 62H88" stroke="#F7EBC6" stroke-opacity=".12" stroke-width="6"/>
+    </pattern>
+    <pattern id="rowsDark" width="96" height="96" patternUnits="userSpaceOnUse" patternTransform="rotate(-22)">
+      <path d="M0 30H96" stroke="#4E653C" stroke-opacity=".18" stroke-width="10"/>
+      <path d="M0 68H96" stroke="#6A814B" stroke-opacity=".16" stroke-width="8"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1080" fill="url(#bg)"/>
+
+  <g opacity=".7">
+    <path d="M-40 239C121 113 380 90 587 153C749 202 825 330 775 455C724 584 548 653 349 635C153 616 -28 510 -60 372C-71 324 -64 286 -40 239Z" fill="url(#fieldA)"/>
+    <path d="M780 112C959 44 1234 53 1439 144C1612 222 1654 350 1573 447C1491 546 1289 617 1072 600C868 584 703 497 661 380C623 271 672 154 780 112Z" fill="url(#fieldB)"/>
+    <path d="M-92 711C47 586 332 542 553 593C781 646 921 786 894 912C864 1052 632 1143 354 1124C63 1104 -159 969 -171 825C-175 783 -148 744 -92 711Z" fill="url(#fieldC)"/>
+    <path d="M879 507C1025 423 1244 404 1421 462C1601 520 1695 645 1678 789C1659 949 1502 1061 1278 1094C1055 1128 825 1077 726 955C642 852 668 629 879 507Z" fill="url(#fieldD)"/>
+  </g>
+
+  <path d="M620 452L801 1008L885 985L727 412L620 452Z" fill="url(#earth)" fill-opacity=".72"/>
+
+  <path d="M0 576C146 509 365 475 580 502C799 529 969 608 1181 634C1383 659 1518 630 1600 590V1080H0V576Z" fill="#61784A" fill-opacity=".42"/>
+  <path d="M0 655C158 614 341 601 533 628C734 655 964 729 1185 738C1353 745 1498 720 1600 687V1080H0V655Z" fill="#425A35" fill-opacity=".34"/>
+
+  <g opacity=".82">
+    <path d="M-50 188C194 69 511 95 763 217C682 365 474 454 254 440C84 429 -42 358 -50 188Z" fill="url(#rowsLight)"/>
+    <path d="M694 90C916 10 1226 34 1474 160C1420 309 1249 381 1047 370C864 361 715 280 694 90Z" fill="url(#rowsDark)"/>
+    <path d="M-54 648C195 546 513 559 760 688C688 861 462 955 217 935C12 918 -112 827 -54 648Z" fill="url(#rowsDark)"/>
+    <path d="M788 519C1014 414 1289 431 1546 562C1513 789 1301 924 1039 908C829 895 656 774 788 519Z" fill="url(#rowsLight)"/>
+  </g>
+
+  <g filter="url(#blurLarge)" opacity=".55">
+    <ellipse cx="257" cy="150" rx="176" ry="104" fill="#FFF1BF"/>
+    <ellipse cx="1320" cy="198" rx="150" ry="86" fill="#F7FAF0"/>
+    <ellipse cx="1220" cy="850" rx="219" ry="126" fill="#E8F0DB"/>
+  </g>
+</svg>
