@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import type { Locale } from "@/types/content";
@@ -11,17 +12,19 @@ export function SiteMark({ locale }: { locale: Locale }) {
   return (
     <Link
       href={localizePath(locale)}
-      className="site-mark-link inline-flex items-center gap-3 text-sm font-semibold tracking-[0.24em] text-foreground"
+      className="site-mark-link group inline-flex items-center text-foreground"
       aria-label={brandName}
     >
-      <span className="icon-badge flex h-10 w-10 items-center justify-center rounded-2xl bg-brand text-white shadow-[0_16px_40px_rgba(21,49,34,0.22)]">
-        I
-      </span>
-      <span className="flex flex-col leading-none">
-        <span>{brandName}</span>
-        <span className="mt-1 text-[10px] tracking-[0.3em] text-muted">
-          AGRO B2B
-        </span>
+      <span className="relative inline-flex shrink-0 transition duration-300 ease-out motion-reduce:transform-none group-hover:-translate-y-0.5 group-hover:scale-[1.02]">
+        <Image
+          src="/media/brand/impexfeed-logo.png"
+          alt=""
+          width={276}
+          height={182}
+          priority
+          unoptimized
+          className="h-11 w-auto max-w-[min(10rem,calc(100vw-8rem))] bg-transparent sm:h-12"
+        />
       </span>
     </Link>
   );

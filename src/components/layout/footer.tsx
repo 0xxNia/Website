@@ -19,6 +19,7 @@ type FooterData = {
     address: string;
     phone: string;
     email: string;
+    registration?: string;
   }>;
 };
 
@@ -88,9 +89,14 @@ export function Footer({
                   className="rounded-[1.35rem] border border-line bg-white/55 p-4 text-sm leading-6 text-muted"
                 >
                   <p className="font-semibold text-foreground">{office.city}</p>
-                  <p>{office.address}</p>
+                  <p className="whitespace-pre-line">{office.address}</p>
                   <p>{office.phone}</p>
                   <p>{office.email}</p>
+                  {office.registration ? (
+                    <p className="mt-2 text-xs leading-snug text-muted">
+                      {office.registration}
+                    </p>
+                  ) : null}
                 </div>
               ))}
             </div>

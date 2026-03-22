@@ -100,12 +100,17 @@ export default async function ContactsPage({
                         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
                           {office.city}
                         </p>
-                        <p className="mt-3 text-sm leading-7 text-foreground">
+                        <p className="mt-3 whitespace-pre-line text-sm leading-7 text-foreground">
                           {office.address}
                         </p>
                         <p className="mt-3 text-sm text-muted">{office.phone}</p>
                         <p className="mt-1 text-sm text-muted">{office.email}</p>
                         <p className="mt-1 text-sm text-muted">{office.schedule}</p>
+                        {"registration" in office && office.registration ? (
+                          <p className="mt-2 text-xs leading-snug text-muted">
+                            {office.registration}
+                          </p>
+                        ) : null}
                       </article>
                     ))}
                   </div>

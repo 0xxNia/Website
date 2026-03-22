@@ -63,9 +63,11 @@ const siteContent = {
       offices: [
         {
           city: "Москва",
-          address: "Пресненская набережная, 12, офис 904",
-          phone: "+7 (495) 204-72-18",
+          address:
+            "123242, г. Москва\nвн.тер.г. муниципальный округ Пресненский\nпер. Капранова, д. 3, стр. 2",
+          phone: "+7 (495) 640-67-70",
           email: "sales@impxfit.com",
+          registration: "ИНН 7701847486 / КПП 770301001",
         },
         {
           city: "Алматы",
@@ -273,10 +275,12 @@ const siteContent = {
       offices: [
         {
           city: "Москва",
-          address: "Пресненская набережная, 12, башня «Федерация Восток», офис 904",
-          phone: "+7 (495) 204-72-18",
+          address:
+            "123242, г. Москва\nвн.тер.г. муниципальный округ Пресненский\nпер. Капранова, д. 3, стр. 2",
+          phone: "+7 (495) 640-67-70",
           email: "sales@impxfit.com",
           schedule: "Пн-Пт, 09:00-18:00",
+          registration: "ИНН 7701847486 / КПП 770301001",
         },
         {
           city: "Алматы",
@@ -370,9 +374,11 @@ const siteContent = {
       offices: [
         {
           city: "Moscow",
-          address: "12 Presnenskaya Embankment, office 904",
-          phone: "+7 (495) 204-72-18",
+          address:
+            "123242, Moscow\nPresnensky municipal district\nKapranov Lane 3, building 2",
+          phone: "+7 (495) 640-67-70",
           email: "sales@impxfit.com",
+          registration: "INN 7701847486 / KPP 770301001",
         },
         {
           city: "Almaty",
@@ -580,10 +586,12 @@ const siteContent = {
       offices: [
         {
           city: "Moscow",
-          address: "12 Presnenskaya Embankment, Federation East tower, office 904",
-          phone: "+7 (495) 204-72-18",
+          address:
+            "123242, Moscow\nPresnensky municipal district\nKapranov Lane 3, building 2",
+          phone: "+7 (495) 640-67-70",
           email: "sales@impxfit.com",
           schedule: "Mon-Fri, 09:00-18:00",
+          registration: "INN 7701847486 / KPP 770301001",
         },
         {
           city: "Almaty",
@@ -677,9 +685,11 @@ const siteContent = {
       offices: [
         {
           city: "Мәскеу",
-          address: "Пресненская жағалауы, 12, 904-кеңсе",
-          phone: "+7 (495) 204-72-18",
+          address:
+            "123242, г. Москва\nвн.тер.г. муниципальный округ Пресненский\nпер. Капранова, д. 3, стр. 2",
+          phone: "+7 (495) 640-67-70",
           email: "sales@impxfit.com",
+          registration: "ИНН 7701847486 / КПП 770301001",
         },
         {
           city: "Алматы",
@@ -887,10 +897,12 @@ const siteContent = {
       offices: [
         {
           city: "Мәскеу",
-          address: "Пресненская жағалауы, 12, «Федерация Восток» мұнарасы, 904-кеңсе",
-          phone: "+7 (495) 204-72-18",
+          address:
+            "123242, г. Москва\nвн.тер.г. муниципальный округ Пресненский\nпер. Капранова, д. 3, стр. 2",
+          phone: "+7 (495) 640-67-70",
           email: "sales@impxfit.com",
           schedule: "Дс-Жм, 09:00-18:00",
+          registration: "ИНН 7701847486 / КПП 770301001",
         },
         {
           city: "Алматы",
