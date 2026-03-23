@@ -66,7 +66,7 @@ const siteContent = {
           address:
             "123242, г. Москва\nвн.тер.г. муниципальный округ Пресненский\nпер. Капранова, д. 3, стр. 2",
           phone: "+7 (495) 640-67-70",
-          email: "sales@impxfit.com",
+          email: "urr@impexfeed.com",
           registration: "ИНН 7701847486 / КПП 770301001",
         },
         {
@@ -278,7 +278,7 @@ const siteContent = {
           address:
             "123242, г. Москва\nвн.тер.г. муниципальный округ Пресненский\nпер. Капранова, д. 3, стр. 2",
           phone: "+7 (495) 640-67-70",
-          email: "sales@impxfit.com",
+          email: "urr@impexfeed.com",
           schedule: "Пн-Пт, 09:00-18:00",
           registration: "ИНН 7701847486 / КПП 770301001",
         },
@@ -377,7 +377,7 @@ const siteContent = {
           address:
             "123242, Moscow\nPresnensky municipal district\nKapranov Lane 3, building 2",
           phone: "+7 (495) 640-67-70",
-          email: "sales@impxfit.com",
+          email: "urr@impexfeed.com",
           registration: "INN 7701847486 / KPP 770301001",
         },
         {
@@ -589,7 +589,7 @@ const siteContent = {
           address:
             "123242, Moscow\nPresnensky municipal district\nKapranov Lane 3, building 2",
           phone: "+7 (495) 640-67-70",
-          email: "sales@impxfit.com",
+          email: "urr@impexfeed.com",
           schedule: "Mon-Fri, 09:00-18:00",
           registration: "INN 7701847486 / KPP 770301001",
         },
@@ -688,7 +688,7 @@ const siteContent = {
           address:
             "123242, г. Москва\nвн.тер.г. муниципальный округ Пресненский\nпер. Капранова, д. 3, стр. 2",
           phone: "+7 (495) 640-67-70",
-          email: "sales@impxfit.com",
+          email: "urr@impexfeed.com",
           registration: "ИНН 7701847486 / КПП 770301001",
         },
         {
@@ -900,7 +900,7 @@ const siteContent = {
           address:
             "123242, г. Москва\nвн.тер.г. муниципальный округ Пресненский\nпер. Капранова, д. 3, стр. 2",
           phone: "+7 (495) 640-67-70",
-          email: "sales@impxfit.com",
+          email: "urr@impexfeed.com",
           schedule: "Дс-Жм, 09:00-18:00",
           registration: "ИНН 7701847486 / КПП 770301001",
         },

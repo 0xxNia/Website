@@ -55,7 +55,7 @@ const biocontainment: LocalizedProduct = {
     },
     { label: T("Растворимость", "Solubility"), value: T("растворим", "soluble") },
     {
-      label: T("Срок годности", "Shelf life"),
+      label: T("Условия хранения", "Storage conditions"),
       value: T(
         "при −12…−18 °C — 3 года; при не выше +6 °C и влажности не более 85% — 1 год",
         "at temperatures from -12 °C to -18 °C – 3 years from the date of manufacture; at a temperature not higher than +6 °C and relative humidity not more than 85% – 1 year from the date of manufacture",

@@ -86,7 +86,7 @@ const cattleOnly: LocalizedProduct[] = [
     specs: [
       { label: T("Условия хранения", "Storage conditions"), value: T("сухое прохладное место (до +25 °C)", "in a dry, cool place (up to +25°С)") },
       {
-        label: T("Срок годности", "Expiration date"),
+        label: T("Условия хранения", "Storage conditions"),
         value: T("жидкий пропиленгликоль — 1 год с даты производства", "liquid propylene glycol – 1 year from the date of manufacture"),
       },
     ],
@@ -129,43 +129,6 @@ const cattleOnly: LocalizedProduct[] = [
     specs: [],
   },
   {
-    slug: "afluksid",
-    listingImage: "/media/catalog/cattle-hero.png",
-    badge: T("Противодиарейные", "Antidiarrheal drugs"),
-    name: T("Афлюксид", "Afluksid"),
-    summary: T(
-      "Кормовая добавка природного происхождения на основе смектитовых минералов; сорбционные и детоксицирующие свойства.",
-      "AFLUKSID – feed additive natural origin, made on the basis of smectite minerals, it is polyfunctional sorption and detoxifying properties.",
-    ),
-    description: T(
-      "Содержит электролиты — эффективен при обезвоживании, в т.ч. при длительной острой диарее. Связывается с гликопротеинами слизи (цитопротекция), стабилизирует слизистую ЖКТ, сильный адсорбент, слегка повышает pH, снижает агрессию соляной кислоты, уменьшает потери электролитов и жидкости. Минералы Ca, Na, K, Mg, Fe, I. Не нарушает нормальную микрофлору.",
-      "AFLUKSID – feed additive natural origin, made on the basis of smectite minerals, it is polyfunctional sorption and detoxifying properties. It contains electrolytes, so it can be effectively used in all conditions of the body’s dehydration, especially with prolonged acute diarrhea. Forms a polyvalent connection with mucus glycoproteins, which ensures its cytoprotective action. Stabilizes the protective mucous barrier of the gastrointestinal tract. It has a powerful adsorbing effect. It contributes to a slight increase in pH and reduce the aggressive effects of hydrochloric acid. Reduces the loss of electrolytes and fluids. Contains vital mineral elements – calcium, sodium, potassium, magnesium, iron, iodine. Does not cause violations of normal microflora, creates a favorable environment for its habitat.",
-    ),
-    benefits: TList([], []),
-    application: T(
-      "Профилактика: 50 г порошка на голову 2 раза в сутки с молоком 3–4 дня. Тяжёлая диарея: 50 г в 200–300 мл кипячёной воды до кормления; далее по протоколу. Полный протокол — на странице продукта.",
-      "Prevention: 50 grams of powder on 1 head 2 times a day, with milk for 3-4 days. Severe diarrhea: 50 grams in 200-300 ml warm boiled water before feeding; see full protocol on product page.",
-    ),
-    form: T("Серо-кремовый порошок", "grayish cream powder"),
-    packaging: T("Пластиковые вёдра 0,4–10 кг", "plastic buckets from 0.4 to 10 kg"),
-    leadTime: T("24 месяца с даты производства", "24 months from the date of manufacture"),
-    tags: TList(["Противодиарейное", "Телёнок", "Смектит"], ["Antidiarrheal", "Calf", "Smectite"]),
-    specs: [
-      {
-        label: T("Состав", "Composition"),
-        value: T(
-          "диоктаэдрический монтмориллонит, декстроза моногидрат, цитрат натрия, хлорид натрия, хлорид калия, сахаринат натрия, ванилин",
-          "dioctahedral montmorillonite, dextrose monohydrate, sodium citrate, sodium chloride, potassium chloride, sodium saccharin, vanillin",
-        ),
-      },
-      { label: T("Производство", "Production"), value: T("Россия", "Russia") },
-      {
-        label: T("Условия хранения", "Storage conditions"),
-        value: T("сухое место, без прямых солнечных лучей, −20 °C … +25 °C", "dry place, protected from sunlight at a temperature of -20 C0 to 25 C0"),
-      },
-    ],
-  },
-  {
     slug: "magnesium-sulfate",
     listingImage: "/media/catalog/cattle-hero.png",
     badge: T("Макроэлементы", "Macroelements"),
@@ -201,7 +164,7 @@ const cattleOnly: LocalizedProduct[] = [
       { label: T("Содержание активных веществ", "The content of active components"), value: T("не менее 98,8%", "not less than 98.8%") },
       { label: T("Производитель", "Manufacturer"), value: T("KALI, Германия", "KALI, Germany") },
       { label: T("Упаковка", "Packaging"), value: T("Мешки 25 кг", "25 kg bags") },
-      { label: T("Срок годности", "Expiration date"), value: T("2 года", "2 years") },
+      { label: T("Условия хранения", "Storage conditions"), value: T("2 года", "2 years") },
     ],
   },
 ];
@@ -214,8 +177,8 @@ export const cattleFeedimportProducts: LocalizedProduct[] = [
 export const cattleFeedimportGroups: LocalizedProductGroup[] = [
   {
     id: "mycotoxin-binder",
-    title: T("Связыватели микотоксинов", "Mycotoxin binder"),
-    productSlugs: ["novasil-plus", "maxisorb", "toxinon", "toxinon-organic"],
+    title: T("Адсорбенты микотоксинов", "Mycotoxin adsorbents"),
+    productSlugs: ["novasil-plus"],
   },
   {
     id: "energy-additives",
@@ -230,7 +193,7 @@ export const cattleFeedimportGroups: LocalizedProductGroup[] = [
   {
     id: "antidiarrheal",
     title: T("Противодиарейные препараты", "Antidiarrheal drugs"),
-    productSlugs: ["afluksid"],
+    productSlugs: [],
   },
   {
     id: "macroelements",

@@ -4,7 +4,6 @@ import { T, TList } from "./l10n";
 import { mycotoxinBinderProducts } from "./mycotoxin-products";
 import { feedProductionFeedimportProducts } from "./feed-production-products";
 
-const balangut = feedProductionFeedimportProducts.find((p) => p.slug === "balangut")!;
 const luminase = feedProductionFeedimportProducts.find((p) => p.slug === "luminase-5500-hr")!;
 
 const capaolSwine: LocalizedProduct = {
@@ -194,13 +193,12 @@ const magnesiumSulfateSwine: LocalizedProduct = {
     { label: T("Содержание активных веществ", "The content of active components"), value: T("не менее 98,8%", "not less than 98.8%") },
     { label: T("Производитель", "Manufacturer"), value: T("KALI, Германия", "KALI, Germany") },
     { label: T("Упаковка", "Packaging"), value: T("Мешки 25 кг", "25 kg bags") },
-    { label: T("Срок годности", "Expiration date"), value: T("2 года", "2 years") },
+    { label: T("Условия хранения", "Storage conditions"), value: T("2 года", "2 years") },
   ],
 };
 
 export const swineFeedimportProducts: LocalizedProduct[] = [
   ...mycotoxinBinderProducts,
-  { ...balangut, listingImage: "/media/catalog/swine-hero.jpg" },
   capaolSwine,
   luproMixNcSwine,
   luproCidNaSwine,
@@ -213,11 +211,10 @@ export const swineFeedimportProducts: LocalizedProduct[] = [
 export const swineFeedimportGroups: LocalizedProductGroup[] = [
   {
     id: "mycotoxin-binder",
-    title: T("Связыватели микотоксинов", "Mycotoxin binder"),
-    productSlugs: ["novasil-plus", "maxisorb", "toxinon", "toxinon-organic"],
+    title: T("Адсорбенты микотоксинов", "Mycotoxin adsorbents"),
+    productSlugs: ["novasil-plus"],
   },
   { id: "probiotic", title: T("Пробиотические препараты", "Probiotic preparations"), productSlugs: [] },
-  { id: "protected-acids", title: T("Защищённые кислоты", "Protected acids"), productSlugs: ["balangut"] },
   { id: "protected-fat", title: T("Защищённый жир", "Protected fat"), productSlugs: ["capaol"] },
   {
     id: "hygiene",

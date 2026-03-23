@@ -10,19 +10,8 @@ import type { Locale } from "@/types/content";
 
 import { CatalogDetailScroll } from "@/components/catalog/catalog-detail-scroll";
 import { CategorySidebarNav } from "@/components/catalog/category-sidebar-nav";
-import { ContactCta } from "@/components/sections/contact-cta";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
-import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
-import {
-  PhotoPanelCard,
-  photoPanelBodyClass,
-  photoPanelEyebrowClass,
-  photoPanelTitleClass,
-} from "@/components/ui/photo-panel-card";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { panelImageAt } from "@/lib/panel-images";
-import { cn } from "@/lib/utils";
 
 function splitProductDescription(description: string): {
   lead?: string;
@@ -164,17 +153,17 @@ export default async function ProductPage({
     ru: {
       form: "Форма",
       packaging: "Упаковка",
-      leadTime: "Срок",
+      leadTime: "Условия хранения",
     },
     en: {
       form: "Form",
       packaging: "Packaging",
-      leadTime: "Lead time",
+      leadTime: "Storage conditions",
     },
     kk: {
       form: "Форма",
       packaging: "Қаптама",
-      leadTime: "Мерзім",
+      leadTime: "Сақтау шарттары",
     },
   }[locale];
 
@@ -184,7 +173,6 @@ export default async function ProductPage({
     notFound();
   }
 
-  const siblingProducts = category.products.filter((item) => item.slug !== product.slug);
   const explorerAllLabel =
     { ru: "Все позиции", en: "All positions", kk: "Барлық позициялар" }[locale];
 
@@ -217,7 +205,7 @@ export default async function ProductPage({
                 className="catalog-product-main overflow-hidden rounded-[1.35rem] border border-line bg-white shadow-[0_12px_40px_rgba(19,38,27,0.06)]"
               >
                 {product.listingImage ? (
-                  <div className="relative aspect-[21/9] w-full min-h-[140px] bg-brand-soft/20">
+                  <div className="relative aspect-21/9 w-full min-h-[140px] bg-brand-soft/20">
                     <Image
                       src={product.listingImage}
                       alt=""
@@ -333,52 +321,10 @@ export default async function ProductPage({
                 </div>
               </article>
 
-              {siblingProducts.length > 0 ? (
-                <div>
-                  <SectionHeading
-                    eyebrow={site.common.solutionsTitle}
-                    title={category.title}
-                    description={site.common.relatedCategoriesTitle}
-                  />
-                  <div className="mt-10 grid gap-6 sm:grid-cols-2">
-                    {siblingProducts.map((item, index) => (
-                      <PhotoPanelCard
-                        key={item.slug}
-                        image={item.listingImage ?? panelImageAt(index + 6)}
-                        className="min-h-[280px]"
-                      >
-                        <p className={photoPanelEyebrowClass}>{item.badge}</p>
-                        <h2 className={cn(photoPanelTitleClass, "mt-3")}>{item.name}</h2>
-                        <p className={cn(photoPanelBodyClass, "mt-4")}>{item.summary}</p>
-                        <ButtonLink
-                          href={localizePath(locale, `/catalog/${category.slug}/${item.slug}`)}
-                          label={site.common.productDetails}
-                          variant="ghost"
-                          className="mt-auto px-0 pt-4 !text-[#e8f5a8] hover:!text-white"
-                        />
-                      </PhotoPanelCard>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
             </div>
           </div>
         </Container>
       </section>
-      <ContactCta
-        eyebrow={site.home.cta.eyebrow}
-        title={site.common.requestTitle}
-        description={product.application}
-        backgroundImage="/media/contact/contact-cta-fields.jpg"
-        primaryAction={{
-          label: site.common.goToContacts,
-          href: localizePath(locale, "/contacts"),
-        }}
-        secondaryAction={{
-          label: site.home.cta.secondaryAction.label,
-          href: localizePath(locale, site.home.cta.secondaryAction.href),
-        }}
-      />
     </main>
   );
 }

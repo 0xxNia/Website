@@ -98,7 +98,6 @@ export function CategorySidebarNav({
       <h2 className="text-[0.95rem] font-bold leading-snug text-foreground sm:text-base">
         {category.title}
       </h2>
-      <p className="mt-2 text-xs leading-5 text-muted">{category.summary}</p>
       <nav className="mt-4 space-y-2" aria-label={labels.allPositions}>
         {groups.map((group) => (
           <div key={group.id} className="rounded-xl border border-[rgba(28,38,29,0.08)] bg-white/80">

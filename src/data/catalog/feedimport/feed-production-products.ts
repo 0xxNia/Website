@@ -113,36 +113,6 @@ const aminoProducts: LocalizedProduct[] = [
   },
 ];
 
-const protectedAcids: LocalizedProduct[] = [
-  {
-    slug: "balangut",
-    listingImage: "/media/catalog/feed-production-hero.png",
-    badge: T("Защищённые кислоты", "Protected acids"),
-    name: T("Балангут", "Balangut"),
-    summary: T(
-      "Комплекс защищённых кислот BalanGut (моно-, ди- и триглицериды жирных кислот) от BASF.",
-      "Complex of protected BalanGut acids (mono-, di- and triglycerides of fatty acids) from BASF.",
-    ),
-    description: T(
-      "Комплекс защищённых кислот BalanGut (моно-, ди- и триглицериды жирных кислот) от BASF: стимулирует развитие, поддерживает здоровье и быстрое восстановление кишечника за счёт доставки масляной кислоты эпителию (от 0,3 кг/т); санитария кишечника от широкого спектра патогенов (сальмонелла, кишечная палочка, клостридии и др.) и восстановление микрофлоры (от 1 кг/т); концепция снижения антибиотиков (от 2 кг/т). Совместим с ветпрепаратами и добавками, синергия с ними. Термостабилен.",
-      "Complex of protected BalanGut acids (mono-, di- and triglycerides of fatty acids) from BASF, designed for: To stimulate the development, support the health and rapid recovery of the intestines of the animal due to the effective supply of the intestinal epithelium with butyric acid (available at a dosage of 0.3 kg / t and above). To ensure the sanitation of the animal’s intestines from a fairly wide range of pathogenic microflora, such as salmonella, escherichia, clostridium, etc., and restore the normal balance of microflora (available at a dosage of 1 kg/t and above). For use within the framework of the concept of partial or complete rejection of the use of antibacterial drugs in animal rearing (available at dosages of 2 kg/ t and above). The drug is fully compatible with any veterinary drugs and feed additives, has a synergistic effect with them, weakening the protection of bacteria – mono-di-triglycerides of fatty acids in the composition of BalanGut make it much more vulnerable even to small dosages of products used at the enterprise as animal treatment. The drug is thermostable.",
-    ),
-    benefits: TList([], []),
-    application: T("Дозировки 0,3–2+ кг/т в зависимости от задачи.", "Dosages 0.3–2+ kg/t depending on objective."),
-    form: T("Порошок и жидкость", "Powder and liquid"),
-    packaging: T(
-      "Порошок в мешках 25 кг, жидкость в канистрах 20 л и IBC 1000 л",
-      "Powder in bags of 25 kg, liquid in cans of 20 liters and IBC containers of 1000 liters",
-    ),
-    leadTime: T("24 месяца с даты производства", "24 months from the date of manufacture"),
-    tags: TList(["Защищённые кислоты", "BASF", "Масляная кислота"], ["Protected acids", "BASF", "Butyric acid"]),
-    specs: [
-      { label: T("Производитель", "Manufacturer"), value: T("SILO S.p.A., Италия", "SILO S.p.A., Italy") },
-      { label: T("Срок годности", "Expiration date"), value: T("24 месяца с даты производства", "24 months from the date of manufacture") },
-    ],
-  },
-];
-
 const proteinMaterials: LocalizedProduct[] = [
   {
     slug: "sunflower-meal",
@@ -344,7 +314,7 @@ const minerals: LocalizedProduct[] = [
       { label: T("Содержание активных веществ", "The content of active components"), value: T("не менее 98,8%", "not less than 98.8%") },
       { label: T("Производитель", "Manufacturer"), value: T("KALI, Германия", "KALI, Germany") },
       { label: T("Упаковка", "Packaging"), value: T("Мешки 25 кг", "25 kg bags") },
-      { label: T("Срок годности", "Expiration date"), value: T("2 года", "2 years") },
+      { label: T("Условия хранения", "Storage conditions"), value: T("2 года", "2 years") },
     ],
   },
 ];
@@ -408,7 +378,6 @@ const enzymes: LocalizedProduct[] = [
 export const feedProductionFeedimportProducts: LocalizedProduct[] = [
   ...mycotoxinBinderProducts,
   ...aminoProducts,
-  ...protectedAcids,
   ...proteinMaterials,
   ...vitamins,
   ...minerals,
@@ -418,18 +387,13 @@ export const feedProductionFeedimportProducts: LocalizedProduct[] = [
 export const feedProductionFeedimportGroups: LocalizedProductGroup[] = [
   {
     id: "mycotoxin-binder",
-    title: T("Связыватели микотоксинов", "Mycotoxin binder"),
-    productSlugs: ["novasil-plus", "maxisorb", "toxinon", "toxinon-organic"],
+    title: T("Адсорбенты микотоксинов", "Mycotoxin adsorbents"),
+    productSlugs: ["novasil-plus"],
   },
   {
     id: "amino-acids",
     title: T("Аминокислоты", "Amino acids"),
     productSlugs: ["methionine", "lysine", "feed-threonine", "tryptophan"],
-  },
-  {
-    id: "protected-acids",
-    title: T("Защищённые кислоты", "Protected acids"),
-    productSlugs: ["balangut"],
   },
   {
     id: "protein-materials",

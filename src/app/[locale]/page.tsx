@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { getCategories, getFeaturedProducts } from "@/data/catalog";
+import { getCategories } from "@/data/catalog";
 import { getLatestNews } from "@/data/news";
 import { getSiteContent } from "@/data/site";
 import { getLocaleFromParams, localizePath } from "@/lib/i18n";
@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 
 import { CategoryGrid } from "@/components/sections/category-grid";
 import { ContactCta } from "@/components/sections/contact-cta";
-import { HomePortalHero } from "@/components/sections/home-portal-hero";
 import { NewsCard } from "@/components/sections/news-card";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
@@ -45,31 +44,10 @@ export default async function HomePage({
   const locale = await getLocaleFromParams(params);
   const site = getSiteContent(locale);
   const categories = getCategories(locale);
-  const featuredProducts = getFeaturedProducts(locale);
   const news = getLatestNews(locale, 3);
 
   return (
     <main>
-      <HomePortalHero
-        locale={locale}
-        eyebrow={site.home.hero.eyebrow}
-        title={site.home.hero.title}
-        description={site.home.hero.description}
-        highlights={site.home.hero.highlights}
-        products={featuredProducts}
-        primaryAction={{
-          ...site.home.hero.primaryAction,
-          href: localizePath(locale, site.home.hero.primaryAction.href),
-        }}
-        secondaryAction={{
-          ...site.home.hero.secondaryAction,
-          href: localizePath(locale, site.home.hero.secondaryAction.href),
-        }}
-        stats={site.home.hero.stats}
-        productActionLabel={site.common.productDetails}
-        catalogActionLabel={site.common.catalogDetails}
-      />
-
       <ScrollReveal>
         <CategoryGrid
           locale={locale}

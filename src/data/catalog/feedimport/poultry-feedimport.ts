@@ -4,7 +4,6 @@ import { T, TList } from "./l10n";
 import { mycotoxinBinderProducts } from "./mycotoxin-products";
 import { feedProductionFeedimportProducts } from "./feed-production-products";
 
-const balangut = feedProductionFeedimportProducts.find((p) => p.slug === "balangut")!;
 const luminase = feedProductionFeedimportProducts.find((p) => p.slug === "luminase-5500-hr")!;
 
 const capaolPoultry: LocalizedProduct = {
@@ -129,7 +128,6 @@ const luproCidNa: LocalizedProduct = {
 
 export const poultryFeedimportProducts: LocalizedProduct[] = [
   ...mycotoxinBinderProducts,
-  { ...balangut, listingImage: "/media/catalog/poultry-hero.jpg" },
   capaolPoultry,
   luproMixNc,
   amasilNa,
@@ -140,10 +138,9 @@ export const poultryFeedimportProducts: LocalizedProduct[] = [
 export const poultryFeedimportGroups: LocalizedProductGroup[] = [
   {
     id: "mycotoxin-binder",
-    title: T("Связыватели микотоксинов", "Mycotoxin binder"),
-    productSlugs: ["novasil-plus", "maxisorb", "toxinon", "toxinon-organic"],
+    title: T("Адсорбенты микотоксинов", "Mycotoxin adsorbents"),
+    productSlugs: ["novasil-plus"],
   },
-  { id: "protected-acids", title: T("Защищённые кислоты", "Protected acids"), productSlugs: ["balangut"] },
   { id: "protected-fat", title: T("Защищённый жир", "Protected fat"), productSlugs: ["capaol"] },
   {
     id: "hygiene",
