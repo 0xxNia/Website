@@ -19,8 +19,8 @@ export function SiteMark({ locale }: { locale: Locale }) {
         <Image
           src="/media/brand/impexfeed-logo.png"
           alt=""
-          width={276}
-          height={182}
+          width={449}
+          height={285}
           priority
           unoptimized
           className="h-11 w-auto max-w-[min(10rem,calc(100vw-8rem))] bg-transparent sm:h-12"
