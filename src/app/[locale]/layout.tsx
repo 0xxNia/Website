@@ -67,7 +67,6 @@ export default async function LocaleLayout({
           locale={locale}
           categories={categories}
           navigation={site.navigation}
-          languageNames={site.languageNames}
         />
         <div className="flex-1">{children}</div>
         <Footer locale={locale} footer={site.footer} categories={categories} />

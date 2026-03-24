@@ -69,12 +69,6 @@ const siteContent = {
           email: "urr@impexfeed.com",
           registration: "ИНН 7701847486 / КПП 770301001",
         },
-        {
-          city: "Алматы",
-          address: "проспект Аль-Фараби, 77/7, офис 3A",
-          phone: "+7 (727) 355-91-42",
-          email: "asia@impxfit.com",
-        },
       ],
     },
     home: {
@@ -169,15 +163,15 @@ const siteContent = {
         title: "Наш бизнес",
         paragraphs: [
           "Мы сотрудничаем с ведущими европейскими специалистами и технологами: клиенты IMPXFIT получают доступ к актуальным разработкам в области сбалансированного кормления и здорового содержания сельскохозяйственных животных и птицы.",
-          "IMPXFIT выстраивает поставки и сервис так, чтобы ценность не заканчивалась на отгрузке: важны рецептуры, биобезопасность, устойчивость производственных показателей и экономический эффект для клиента.",
+          "Импексфид поставляет широкий спектр продуктов, которые позволяют удовлетворить специфические нужды животноводческих хозяйств и кормопроизводств.",
         ],
       },
       businessShout:
         "МЫ ПОМОГАЕМ ТРАНСФОРМИРОВАТЬ ЖИВОТНОВОДЧЕСКИЕ ХОЗЯЙСТВА И КОРМОВЫЕ ПРОИЗВОДСТВА В ВЫСОКОРЕНТАБЕЛЬНЫЙ БИЗНЕС.",
       footprint:
-        "Штаб-квартира компании расположена в Москве, представительство — в Алматы. Мы работаем с производителями и партнёрами по России, Казахстану и региону.",
+        "Компания «Импексфид» была образована в 2009 году, центральный офис в Москве, представительства в Санкт-Петербурге, Екатеринбурге, Новосибирске, Воронеже, Пензе, Нижнем Новгороде, Вологде и Владимире.",
       mission:
-        "Миссия IMPXFIT — повышать качество продукции и рентабельность бизнеса клиентов за счёт актуальных продуктов и технологий для здорового кормления и ухода за животными.",
+        "содействовать развитию животноводства и птицеводства в России, обеспечивая надежные поставки высококачественных кормовых компонентов.",
       profile: {
         title: "Профиль деятельности",
         items: [
@@ -282,13 +276,6 @@ const siteContent = {
           schedule: "Пн-Пт, 09:00-18:00",
           registration: "ИНН 7701847486 / КПП 770301001",
         },
-        {
-          city: "Алматы",
-          address: "проспект Аль-Фараби, 77/7, офис 3A",
-          phone: "+7 (727) 355-91-42",
-          email: "asia@impxfit.com",
-          schedule: "Пн-Пт, 09:00-18:00",
-        },
       ],
       form: {
         title: "Форма обратной связи",
@@ -379,12 +366,6 @@ const siteContent = {
           phone: "+7 (495) 640-67-70",
           email: "urr@impexfeed.com",
           registration: "INN 7701847486 / KPP 770301001",
-        },
-        {
-          city: "Almaty",
-          address: "77/7 Al-Farabi Avenue, office 3A",
-          phone: "+7 (727) 355-91-42",
-          email: "asia@impxfit.com",
         },
       ],
     },
@@ -486,7 +467,7 @@ const siteContent = {
       businessShout:
         "WE HELP TRANSFORM LIVESTOCK FARMS AND FEED PRODUCTION FACILITIES INTO A HIGHLY PROFITABLE BUSINESS.",
       footprint:
-        "IMPXFIT is headquartered in Moscow with a representative office in Almaty. We work with producers and partners across Russia, Kazakhstan and the wider region.",
+        "IMPXFIT was founded in 2009. The headquarters is in Moscow, with regional offices in Saint Petersburg, Yekaterinburg, Novosibirsk, Voronezh, Penza, Nizhny Novgorod, Vologda and Vladimir.",
       mission:
         "IMPXFIT’s mission is to improve the quality of products and increase the profitability of our clients’ companies by providing up-to-date products and technologies of the highest quality for healthy animal feeding and care.",
       profile: {
@@ -593,13 +574,6 @@ const siteContent = {
           schedule: "Mon-Fri, 09:00-18:00",
           registration: "INN 7701847486 / KPP 770301001",
         },
-        {
-          city: "Almaty",
-          address: "77/7 Al-Farabi Avenue, office 3A",
-          phone: "+7 (727) 355-91-42",
-          email: "asia@impxfit.com",
-          schedule: "Mon-Fri, 09:00-18:00",
-        },
       ],
       form: {
         title: "Contact form",
@@ -690,12 +664,6 @@ const siteContent = {
           phone: "+7 (495) 640-67-70",
           email: "urr@impexfeed.com",
           registration: "ИНН 7701847486 / КПП 770301001",
-        },
-        {
-          city: "Алматы",
-          address: "Әл-Фараби даңғылы, 77/7, 3A-кеңсе",
-          phone: "+7 (727) 355-91-42",
-          email: "asia@impxfit.com",
         },
       ],
     },
@@ -797,7 +765,7 @@ const siteContent = {
       businessShout:
         "БІЗ МАЛ ШАРУАШЫЛЫҒЫ МЕН ЖЕМ ӨНДІРІСІН ЖОҒАРЫ РЕНТАБЕЛЬДІ БИЗНЕСКЕ АЙНАЛДЫРУҒА КӨМЕКТЕСЕМІЗ.",
       footprint:
-        "Компанияның бас кеңсесі Мәскеуде, өкілдігі Алматыда орналасқан. Біз Ресей, Қазақстан және аймақтағы өндірушілермен серіктестермен жұмыс істейміз.",
+        "Компания 2009 жылы құрылды. Орталық кеңсе Мәскеуде, өкілдіктері Санкт-Петербург, Екатеринбург, Новосибирск, Воронеж, Пенза, Нижний Новгород, Вологда және Владимир қалаларында орналасқан.",
       mission:
         "IMPXFIT миссиясы — салауатты қоректендіру мен жануарларға күтім жасаудың заманауи өнімдері мен технологиялары арқылы клиенттер бизнесінің өнім сапасы мен рентабельділігін арттыру.",
       profile: {
@@ -903,13 +871,6 @@ const siteContent = {
           email: "urr@impexfeed.com",
           schedule: "Дс-Жм, 09:00-18:00",
           registration: "ИНН 7701847486 / КПП 770301001",
-        },
-        {
-          city: "Алматы",
-          address: "Әл-Фараби даңғылы, 77/7, 3A-кеңсе",
-          phone: "+7 (727) 355-91-42",
-          email: "asia@impxfit.com",
-          schedule: "Дс-Жм, 09:00-18:00",
         },
       ],
       form: {

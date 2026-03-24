@@ -1218,12 +1218,22 @@ const featuredProductSlugs = [
   "lupro-mix-nc",
   "biocontainment-aibi-lbp-15-10-f",
 ];
+const hiddenCategorySlugs = new Set([
+  "veterinary",
+  "crop-feed-solutions",
+  "technical-support",
+]);
 
 export function getCategories(locale: Locale): Category[] {
-  return categoryRecords.map((category) => localizeCategory(locale, category));
+  return categoryRecords
+    .filter((category) => !hiddenCategorySlugs.has(category.slug))
+    .map((category) => localizeCategory(locale, category));
 }
 
 export function getCategory(locale: Locale, slug: string) {
+  if (hiddenCategorySlugs.has(slug)) {
+    return undefined;
+  }
   const category = categoryRecords.find((item) => item.slug === slug);
   return category ? localizeCategory(locale, category) : undefined;
 }
@@ -1265,14 +1275,18 @@ export function getFeaturedProducts(locale: Locale) {
 }
 
 export function getAllCategoryParams() {
-  return categoryRecords.map((category) => ({ categorySlug: category.slug }));
+  return categoryRecords
+    .filter((category) => !hiddenCategorySlugs.has(category.slug))
+    .map((category) => ({ categorySlug: category.slug }));
 }
 
 export function getAllProductParams() {
-  return categoryRecords.flatMap((category) =>
-    category.products.map((product) => ({
-      categorySlug: category.slug,
-      productSlug: product.slug,
-    })),
-  );
+  return categoryRecords
+    .filter((category) => !hiddenCategorySlugs.has(category.slug))
+    .flatMap((category) =>
+      category.products.map((product) => ({
+        categorySlug: category.slug,
+        productSlug: product.slug,
+      })),
+    );
 }

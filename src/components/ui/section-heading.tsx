@@ -8,7 +8,7 @@ export function SectionHeading({
 }: {
   eyebrow: string;
   title: string;
-  description: string;
+  description?: string;
   align?: "left" | "center";
 }) {
   return (
@@ -19,9 +19,11 @@ export function SectionHeading({
       <h2 className="mt-4 text-balance font-serif text-[2rem] leading-tight text-foreground sm:text-[2.35rem] lg:text-[2.85rem]">
         {title}
       </h2>
-      <p className="mt-4 text-[0.98rem] leading-7 text-muted sm:text-[1.02rem]">
-        {description}
-      </p>
+      {description ? (
+        <p className="mt-4 text-[0.98rem] leading-7 text-muted sm:text-[1.02rem]">
+          {description}
+        </p>
+      ) : null}
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 
 import type { Locale } from "@/types/content";
 
-export const locales = ["ru", "en", "kk"] as const;
+export const locales = ["ru"] as const;
 export const defaultLocale: Locale = "ru";
 
 const localeFormatMap: Record<Locale, string> = {

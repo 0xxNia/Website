@@ -8,7 +8,6 @@ import { localizePath } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import type { Category, Locale } from "@/types/content";
 
-import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Icon } from "@/components/ui/icon";
 import { SiteMark } from "@/components/ui/site-mark";
@@ -26,12 +25,10 @@ export function Header({
   locale,
   categories,
   navigation,
-  languageNames,
 }: {
   locale: Locale;
   categories: Category[];
   navigation: NavigationData;
-  languageNames: Record<Locale, string>;
 }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -87,7 +84,6 @@ export function Header({
               </Link>
             ))}
           </nav>
-          <LanguageSwitcher locale={locale} languageNames={languageNames} />
           <ButtonLink
             href={localizePath(locale, "/contacts")}
             label={navigation.contactAction}
@@ -107,7 +103,6 @@ export function Header({
         <div className="border-t border-line bg-[rgba(247,245,241,0.95)] lg:hidden">
           <div className="mx-auto max-w-[1440px] px-4 py-5 sm:px-6">
             <div className="flex flex-col gap-6">
-              <LanguageSwitcher locale={locale} languageNames={languageNames} />
               <nav className="flex flex-col gap-2">
                 {navigation.links
                   .filter((link) => link.href !== "/catalog")
@@ -137,7 +132,7 @@ export function Header({
                       key={category.slug}
                       href={localizePath(locale, `/catalog/${category.slug}`)}
                       onClick={() => setMenuOpen(false)}
-                      className="header-catalog-link rounded-[1.5rem] border border-line bg-white/70 p-4"
+                      className="header-catalog-link rounded-3xl border border-line bg-white/70 p-4"
                     >
                       <div className="flex items-start gap-3">
                         <span className="icon-badge mt-1 flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-soft text-brand">
