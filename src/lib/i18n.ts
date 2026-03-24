@@ -12,7 +12,7 @@ const localeFormatMap: Record<Locale, string> = {
 };
 
 export function isLocale(value: string): value is Locale {
-  return locales.includes(value as Locale);
+  return (locales as readonly string[]).includes(value);
 }
 
 export async function getLocaleFromParams(
