@@ -38,10 +38,6 @@ export default async function HomePage({
         <CategoryGrid
           locale={locale}
           categories={categories}
-          eyebrow={site.home.categories.eyebrow}
-          title={site.home.categories.title}
-          description={site.home.categories.description}
-          actionLabel={site.common.catalogDetails}
         />
       </ScrollReveal>
     </main>

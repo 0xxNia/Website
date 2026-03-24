@@ -372,23 +372,20 @@ const articleRecords: LocalizedArticle[] = [
 ];
 
 export function getNews(locale: Locale): NewsArticle[] {
-  return articleRecords
-    .map((article) => localizeArticle(locale, article))
-    .sort(
-      (left, right) =>
-        new Date(right.publishedAt).getTime() - new Date(left.publishedAt).getTime(),
-    );
+  void locale;
+  return [];
 }
 
-export function getNewsArticle(locale: Locale, slug: string) {
-  const article = articleRecords.find((item) => item.slug === slug);
-  return article ? localizeArticle(locale, article) : undefined;
+export function getNewsArticle(locale: Locale, slug: string): NewsArticle | undefined {
+  void locale;
+  void slug;
+  return undefined as NewsArticle | undefined;
 }
 
 export function getLatestNews(locale: Locale, limit = 3) {
   return getNews(locale).slice(0, limit);
 }
 
-export function getAllNewsParams() {
-  return articleRecords.map((article) => ({ slug: article.slug }));
+export function getAllNewsParams(): Array<{ slug: string }> {
+  return [];
 }

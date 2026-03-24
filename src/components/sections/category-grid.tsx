@@ -8,26 +8,18 @@ import type { Category, Locale } from "@/types/content";
 import { Container } from "@/components/ui/container";
 import { Icon } from "@/components/ui/icon";
 import { MediaPlaceholder } from "@/components/ui/media-placeholder";
-import { SectionHeading } from "@/components/ui/section-heading";
 
 export function CategoryGrid({
   locale,
   categories,
-  eyebrow,
-  title,
 }: {
   locale: Locale;
   categories: Category[];
-  eyebrow: string;
-  title: string;
-  description: string;
-  actionLabel: string;
 }) {
   return (
     <section className="py-16 sm:py-20">
       <Container>
-        <SectionHeading eyebrow={eyebrow} title={title} description="" />
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {categories.map((category, index) => (
             <Link
               key={category.slug}
@@ -66,9 +58,6 @@ export function CategoryGrid({
                 <div className="absolute left-4 top-4 flex items-center gap-2.5 sm:left-5 sm:top-5">
                   <span className="icon-badge flex h-10 w-10 items-center justify-center rounded-2xl bg-brand text-white shadow-[0_14px_32px_rgba(19,38,27,0.16)]">
                     <Icon name={category.icon} className="h-5 w-5" />
-                  </span>
-                  <span className="rounded-full border border-[rgba(35,74,53,0.12)] bg-[rgba(255,249,240,0.82)] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand shadow-[0_10px_24px_rgba(19,38,27,0.06)] backdrop-blur-sm sm:text-[11px] sm:tracking-[0.22em]">
-                    {category.focusAreas[0]}
                   </span>
                 </div>
                 <span className="absolute right-4 top-4 rounded-full border border-[rgba(35,74,53,0.1)] bg-[rgba(255,249,240,0.76)] px-2.5 py-1 text-[11px] font-semibold tracking-[0.18em] text-brand/82 shadow-[0_10px_24px_rgba(19,38,27,0.05)] backdrop-blur-sm sm:right-5 sm:top-5 sm:px-3 sm:py-1.5 sm:text-xs sm:tracking-[0.2em]">

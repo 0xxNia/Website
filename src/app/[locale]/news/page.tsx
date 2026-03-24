@@ -5,7 +5,6 @@ import { getSiteContent } from "@/data/site";
 import { getLocaleFromParams, localizePath } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 
-import { ContactCta } from "@/components/sections/contact-cta";
 import { NewsCard } from "@/components/sections/news-card";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Container } from "@/components/ui/container";
@@ -60,32 +59,27 @@ export default async function NewsPage({
       </section>
       <section className="py-16 sm:py-20">
         <Container>
-          <div className="grid gap-6 lg:grid-cols-2">
-            {news.map((article) => (
-              <NewsCard
-                key={article.slug}
-                locale={locale}
-                article={article}
-                readMoreLabel={site.common.readMore}
-              />
-            ))}
-          </div>
+          {news.length ? (
+            <div className="grid gap-6 lg:grid-cols-2">
+              {news.map((article) => (
+                <NewsCard
+                  key={article.slug}
+                  locale={locale}
+                  article={article}
+                  readMoreLabel={site.common.readMore}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-[1.6rem] border border-line bg-white/70 p-8 text-center">
+              <p className="font-serif text-3xl text-foreground">Новостей пока нет</p>
+              <p className="mt-3 text-base text-muted">
+                Раздел пуст. Добавьте материалы позже в файле данных.
+              </p>
+            </div>
+          )}
         </Container>
       </section>
-      <ContactCta
-        eyebrow={site.home.cta.eyebrow}
-        title={site.home.cta.title}
-        description={site.home.cta.description}
-        backgroundImage="/media/contact/contact-cta-fields.jpg"
-        primaryAction={{
-          ...site.home.cta.primaryAction,
-          href: localizePath(locale, site.home.cta.primaryAction.href),
-        }}
-        secondaryAction={{
-          ...site.home.cta.secondaryAction,
-          href: localizePath(locale, site.home.cta.secondaryAction.href),
-        }}
-      />
     </main>
   );
 }

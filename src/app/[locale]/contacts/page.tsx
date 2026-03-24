@@ -7,14 +7,6 @@ import { buildMetadata } from "@/lib/metadata";
 import { ContactForm } from "@/components/sections/contact-form";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Container } from "@/components/ui/container";
-import { MediaPlaceholder } from "@/components/ui/media-placeholder";
-import {
-  PhotoPanelCard,
-  photoPanelBodyClass,
-  photoPanelTitleClass,
-} from "@/components/ui/photo-panel-card";
-import { panelImageAt } from "@/lib/panel-images";
-import { cn } from "@/lib/utils";
 
 export async function generateMetadata({
   params,
@@ -52,69 +44,44 @@ export default async function ContactsPage({
       </Container>
       <section className="pb-16 pt-4 sm:pb-20 sm:pt-6">
         <Container>
-          <div className="grid gap-6 lg:grid-cols-[0.8fr,1.2fr]">
-            <MediaPlaceholder
-              icon="contact"
-              title={site.contacts.officesTitle}
-              description={site.contacts.hero.description}
-              chips={site.contacts.offices.map((office) => office.city)}
-              locale={locale}
-              className="min-h-[300px]"
-              heroImage="/media/contact/contacts-offices-interior.png"
+          <div className="relative overflow-hidden rounded-4xl border border-white/20 shadow-[0_22px_54px_rgba(14,26,17,0.12)]">
+            <div
+              className="absolute inset-0 bg-cover bg-no-repeat bg-position-[center_28%]"
+              style={{
+                backgroundImage: "url(/media/contact/contacts-offices-interior.png)",
+              }}
+              aria-hidden
             />
-            <div className="grid gap-6">
-              <div className="grid gap-6 sm:grid-cols-2">
-                {site.contacts.introCards.map((card, index) => (
-                  <PhotoPanelCard
-                    key={card.title}
-                    image={panelImageAt(index + 1)}
-                    className="min-h-[220px]"
+            <div
+              className="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,18,22,0.68)_0%,rgba(12,16,20,0.52)_42%,rgba(10,14,18,0.78)_100%)]"
+              aria-hidden
+            />
+            <div className="relative z-10 p-6 sm:p-8">
+              <h2 className="font-serif text-3xl text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.45)]">
+                {site.contacts.officesTitle}
+              </h2>
+              <div className="mt-6 grid gap-6 sm:grid-cols-2">
+                {site.contacts.offices.map((office) => (
+                  <article
+                    key={office.city}
+                    className="rounded-[1.6rem] border border-white/35 bg-white/92 p-5 shadow-[0_12px_36px_rgba(0,0,0,0.14)] backdrop-blur-[6px]"
                   >
-                    <h2 className={photoPanelTitleClass}>{card.title}</h2>
-                    <p className={cn(photoPanelBodyClass, "mt-4")}>{card.text}</p>
-                  </PhotoPanelCard>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
+                      {office.city}
+                    </p>
+                    <p className="mt-3 whitespace-pre-line text-sm leading-7 text-foreground">
+                      {office.address}
+                    </p>
+                    <p className="mt-3 text-sm text-muted">{office.phone}</p>
+                    <p className="mt-1 text-sm text-muted">{office.email}</p>
+                    <p className="mt-1 text-sm text-muted">{office.schedule}</p>
+                    {"registration" in office && office.registration ? (
+                      <p className="mt-2 text-xs leading-snug text-muted">
+                        {office.registration}
+                      </p>
+                    ) : null}
+                  </article>
                 ))}
-              </div>
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/20 shadow-[0_22px_54px_rgba(14,26,17,0.12)]">
-                <div
-                  className="absolute inset-0 bg-cover bg-[center_28%] bg-no-repeat"
-                  style={{
-                    backgroundImage: "url(/media/contact/contacts-offices-interior.png)",
-                  }}
-                  aria-hidden
-                />
-                <div
-                  className="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,18,22,0.68)_0%,rgba(12,16,20,0.52)_42%,rgba(10,14,18,0.78)_100%)]"
-                  aria-hidden
-                />
-                <div className="relative z-10 p-6 sm:p-8">
-                  <h2 className="font-serif text-3xl text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.45)]">
-                    {site.contacts.officesTitle}
-                  </h2>
-                  <div className="mt-6 grid gap-6 sm:grid-cols-2">
-                    {site.contacts.offices.map((office) => (
-                      <article
-                        key={office.city}
-                        className="rounded-[1.6rem] border border-white/35 bg-white/92 p-5 shadow-[0_12px_36px_rgba(0,0,0,0.14)] backdrop-blur-[6px]"
-                      >
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
-                          {office.city}
-                        </p>
-                        <p className="mt-3 whitespace-pre-line text-sm leading-7 text-foreground">
-                          {office.address}
-                        </p>
-                        <p className="mt-3 text-sm text-muted">{office.phone}</p>
-                        <p className="mt-1 text-sm text-muted">{office.email}</p>
-                        <p className="mt-1 text-sm text-muted">{office.schedule}</p>
-                        {"registration" in office && office.registration ? (
-                          <p className="mt-2 text-xs leading-snug text-muted">
-                            {office.registration}
-                          </p>
-                        ) : null}
-                      </article>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
           </div>
