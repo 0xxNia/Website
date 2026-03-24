@@ -4,7 +4,6 @@ import { getSiteContent } from "@/data/site";
 import { getLocaleFromParams, localizePath } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 
-import { AboutProfileIcon } from "@/components/about/about-profile-icon";
 import { SocialRoleBullet } from "@/components/about/social-role-bullet";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Container } from "@/components/ui/container";
@@ -53,7 +52,7 @@ export default async function AboutPage({
       </Container>
 
       {/* Our business — editorial layout */}
-      <section className="bg-gradient-to-b from-[#e4eef5] via-[#eef5f9] to-[#f2f7fb] py-14 sm:py-20">
+      <section className="bg-linear-to-b from-[#e4eef5] via-[#eef5f9] to-[#f2f7fb] py-14 sm:py-20">
         <Container className="max-w-4xl">
           <ScrollReveal>
           <div className="about-video-shell relative overflow-hidden rounded-[1.65rem] border border-white/50 shadow-[0_24px_70px_rgba(25,55,75,0.12)] sm:rounded-[1.85rem]">
@@ -71,11 +70,11 @@ export default async function AboutPage({
             </video>
             <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(10,26,24,0.74)_0%,rgba(10,26,24,0.56)_28%,rgba(10,26,24,0.34)_54%,rgba(10,26,24,0.52)_100%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,rgba(166,206,57,0.26),transparent_18%),radial-gradient(circle_at_82%_22%,rgba(255,255,255,0.14),transparent_20%)]" />
-            <div className="relative z-10 h-1 bg-gradient-to-r from-[#a6ce39] via-[#8fb832] to-[#a6ce39]/40" aria-hidden />
+            <div className="relative z-10 h-1 bg-linear-to-r from-[#a6ce39] via-[#8fb832] to-[#a6ce39]/40" aria-hidden />
             <div className="relative z-10 px-5 py-9 sm:px-9 sm:py-11 lg:px-12 lg:py-12">
               <div className="flex gap-4 sm:gap-6">
                 <span
-                  className="mt-1 h-12 w-1 shrink-0 rounded-full bg-[#a6ce39] sm:h-[5.25rem]"
+                  className="mt-1 h-12 w-1 shrink-0 rounded-full bg-[#a6ce39] sm:h-21"
                   aria-hidden
                 />
                 <div className="min-w-0 flex-1">
@@ -101,7 +100,7 @@ export default async function AboutPage({
                 ))}
               </div>
 
-              <figure className="mt-9 border-l-[3px] border-[#a6ce39] bg-gradient-to-r from-[#a6ce39]/20 to-white/0 px-5 py-5 sm:mt-10 sm:px-7 sm:py-6">
+              <figure className="mt-9 border-l-[3px] border-[#a6ce39] bg-linear-to-r from-[#a6ce39]/20 to-white/0 px-5 py-5 sm:mt-10 sm:px-7 sm:py-6">
                 <blockquote className="text-[0.72rem] font-bold uppercase leading-[1.65] tracking-[0.12em] text-white sm:text-[0.76rem] sm:tracking-[0.14em]">
                   {about.businessShout}
                 </blockquote>
@@ -128,36 +127,6 @@ export default async function AboutPage({
             </div>
           </div>
           </ScrollReveal>
-        </Container>
-      </section>
-
-      {/* Business profile — soft card per row: icon + text (readable on any width) */}
-      <section className="bg-[#e8f1f7] py-14 sm:py-20">
-        <Container className="max-w-3xl">
-          <ScrollReveal>
-          <h2 className="text-[1.65rem] font-bold leading-tight tracking-tight text-[#1a2f4a] sm:text-[2rem] md:text-[2.15rem]">
-            {about.profile.title}
-          </h2>
-          </ScrollReveal>
-          <ul className="mt-8 flex flex-col gap-5 sm:gap-6">
-            {about.profile.items.map((item, index) => (
-              <li key={item.title}>
-                <ScrollReveal delayMs={index * 75}>
-                <div className="flex flex-col gap-4 rounded-2xl border border-[#d4e4ee] bg-white/85 p-5 shadow-[0_8px_30px_rgba(30,60,80,0.06)] sm:flex-row sm:items-start sm:gap-7 sm:p-7">
-                  <AboutProfileIcon name={item.icon} className="sm:mt-0.5" />
-                  <div className="min-w-0 w-full flex-1">
-                    <h3 className="text-[1.08rem] font-bold leading-snug text-[#1a2f4a] sm:text-[1.2rem]">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 text-[0.95rem] leading-[1.78] text-[#3d4d5c] sm:text-base">
-                      {item.text}
-                    </p>
-                  </div>
-                </div>
-                </ScrollReveal>
-              </li>
-            ))}
-          </ul>
         </Container>
       </section>
 
