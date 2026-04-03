@@ -42,7 +42,7 @@ export async function POST(request: Request) {
     const pass = readRequiredEnv("SMTP_PASS");
     const secure = process.env.SMTP_SECURE === "true";
 
-    const toEmail = process.env.CONTACT_TO_EMAIL ?? "Urr@impexfeed.ru";
+    const toEmail = process.env.CONTACT_TO_EMAIL ?? "urr@impexfeed.com";
     const fromEmail = process.env.CONTACT_FROM_EMAIL ?? user;
 
     const transporter = nodemailer.createTransport({
@@ -70,6 +70,22 @@ export async function POST(request: Request) {
         "",
         "Message:",
         payload.message,
+      ].join("\n"),
+    });
+
+    await transporter.sendMail({
+      from: fromEmail,
+      to: payload.email,
+      subject: "Спасибо, мы получили вашу заявку",
+      text: [
+        "Спасибо, мы получили вашу заявку.",
+        "Мы ответим вам в ближайшее время.",
+        "",
+        "С уважением,",
+        "Компания ИМПЕКСФИД",
+        "123242, г. Москва, вн.тер.г. муниципальный округ Пресненский, пер. Капранова, д. 3, стр. 2",
+        "Тел.: +7 (495) 640-67-70",
+        "Email: urr@impexfeed.com",
       ].join("\n"),
     });
 
