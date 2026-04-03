@@ -24,7 +24,7 @@ export function CategoryGrid({
             <Link
               key={category.slug}
               href={localizePath(locale, `/catalog/${category.slug}`)}
-              className="catalog-card-link group relative overflow-hidden rounded-[2.3rem] border border-line bg-white/90 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(19,38,27,0.1)]"
+              className="catalog-card-link group relative block overflow-hidden rounded-[2.3rem] border border-line/70 bg-transparent transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(19,38,27,0.1)]"
             >
               <div
                 className={cn(
