@@ -26,12 +26,7 @@ export function CategoryGrid({
               href={localizePath(locale, `/catalog/${category.slug}`)}
               className="catalog-card-link group relative block self-start overflow-hidden rounded-[2.3rem] border border-line/70 bg-transparent transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(19,38,27,0.1)]"
             >
-              <div
-                className={cn(
-                  "relative aspect-video overflow-hidden",
-                  index === 0 && "md:aspect-15/8",
-                )}
-              >
+              <div className="relative aspect-video overflow-hidden">
                 {category.coverImage ? (
                   <Image
                     src={category.coverImage}
