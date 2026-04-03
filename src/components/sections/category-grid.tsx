@@ -19,7 +19,7 @@ export function CategoryGrid({
   return (
     <section className="py-16 sm:py-20">
       <Container>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-x-6 gap-y-0 md:grid-cols-2">
           {categories.map((category, index) => (
             <Link
               key={category.slug}
