@@ -19,12 +19,12 @@ export function CategoryGrid({
   return (
     <section className="py-16 sm:py-20">
       <Container>
-        <div className="grid gap-x-6 gap-y-0 md:grid-cols-2">
+        <div className="grid items-start gap-x-6 gap-y-3 md:grid-cols-2">
           {categories.map((category, index) => (
             <Link
               key={category.slug}
               href={localizePath(locale, `/catalog/${category.slug}`)}
-              className="catalog-card-link group relative block overflow-hidden rounded-[2.3rem] border border-line/70 bg-transparent transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(19,38,27,0.1)]"
+              className="catalog-card-link group relative block self-start overflow-hidden rounded-[2.3rem] border border-line/70 bg-transparent transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(19,38,27,0.1)]"
             >
               <div
                 className={cn(

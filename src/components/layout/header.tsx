@@ -49,13 +49,13 @@ export function Header({
                 {navigation.catalogLabel}
               </button>
               <div className="pointer-events-none absolute left-0 top-full z-50 pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
-                <div className="glass-card w-[min(22rem,calc(100vw-2rem))] rounded-2xl border border-line py-2 shadow-lg">
+                <div className="glass-card w-[min(22rem,calc(100vw-2rem))] rounded-2xl border border-line py-2.5 shadow-lg">
                   {categories.map((category) => (
                     <Link
                       key={category.slug}
                       href={localizePath(locale, `/catalog/${category.slug}`)}
                       onClick={() => setMenuOpen(false)}
-                      className="header-catalog-link flex items-center gap-3 px-3 py-2.5 transition-colors hover:bg-white/80"
+                      className="header-catalog-link mx-1 flex items-center gap-3.5 rounded-xl px-3 py-3 transition-colors hover:bg-white/80"
                     >
                       <span className="icon-badge flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand">
                         <Icon name={category.icon} className="h-[1.15rem] w-[1.15rem]" />

@@ -281,6 +281,12 @@ select {
   filter: saturate(1.06);
 }
 
+/* Keep header menu icons from overlapping neighboring rows on hover. */
+.header-catalog-link:hover .icon-badge,
+.header-catalog-link:focus-visible .icon-badge {
+  transform: scale(1.045);
+}
+
 /* Hero product tiles: scale only (no translate) — avoids jitter with backdrop-blur; see home-portal-hero fixed CTA row */
 .hero-showcase-link .icon-badge-hero-tile:hover,
 .hero-showcase-link:hover .icon-badge-hero-tile,
